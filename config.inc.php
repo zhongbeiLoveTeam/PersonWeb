@@ -6,6 +6,6 @@ return array (
   'DB_USER' => 'root',
   'DB_PORT' => '3306',
   'DB_PREFIX' => 'sean_',
-  'DEFAULT_THEME' => 'default',
 ); 
+
 ?>

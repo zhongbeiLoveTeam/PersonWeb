@@ -21,6 +21,14 @@ $array = array(
 //	'URL_PATHINFO_DEPR' =>'-',  //参数之间的分割符号    	
     'DEFAULT_LANG' => 'zh-cn', // 默认语言	
 	'SHOW_PAGE_TRACE'=>true,
+		'DEFAULT_THEME' => 'default',
+		'TMPL_PARSE_STRING' => array (
+				'__CSS__' => '/PersonWeb/index/Tpl/default/Public/Css',
+				'__JS__' => '/PersonWeb/index/Tpl/default/Js',
+				'__UPLOAD__' => '/PersonWeb/index/Tpl/default/Upload',
+				'__IMG__' => '/PersonWeb/index/Tpl/default/images',
+		
+		),
 );
 return array_merge($config,$array);
 ?>
