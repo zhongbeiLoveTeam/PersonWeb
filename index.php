@@ -4,23 +4,26 @@
 // +----------------------------------------------------------------------
 // | Copyright (c) 2006-2014 http://thinkphp.cn All rights reserved.
 // +----------------------------------------------------------------------
-// | Licensed ( http://www.apache.org/licenses/LICENSE-2.0 )
+// | 
 // +----------------------------------------------------------------------
-// | Author: liu21st <liu21st@gmail.com>
+// | Author: 
 // +----------------------------------------------------------------------
+defined('ROOT_PATH') or define('ROOT_PATH', dirname(__FILE__));
+if (!is_file(ROOT_PATH . '/data/install.lock')) {
+    header('Location: ./install.php');
+    exit;
+}
 
-// 应用入口文件
+/* 应用名称*/
+define('APP_NAME', 'index');
+/* 应用目录*/
+define('APP_PATH', './index/');
+/* 数据目录*/
+define('DATA_PATH', './data/');
+/* HTML静态文件目录*/
+define('HTML_PATH', DATA_PATH . 'html/');
 
-// 检测PHP环境
-if(version_compare(PHP_VERSION,'5.3.0','<'))  die('require PHP > 5.3.0 !');
-
-// 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
-define('APP_DEBUG',True);
-
-// 定义应用目录
-define('APP_PATH','./Application/');
-
-// 引入ThinkPHP入口文件
-require './ThinkPHP/ThinkPHP.php';
-
-// 亲^_^ 后面不需要任何代码了 就是如此简单
+/* DEBUG开关*/
+define('APP_DEBUG', true);
+require(ROOT_PATH.'/core/core.php');
+?>
