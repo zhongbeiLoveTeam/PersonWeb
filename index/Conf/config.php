@@ -24,9 +24,9 @@ $array = array(
 		'DEFAULT_THEME' => 'default',
 		'TMPL_PARSE_STRING' => array (
 				'__CSS__' => '/PersonWeb/index/Tpl/default/Public/Css',
-				'__JS__' => '/PersonWeb/index/Tpl/default/Js',
-				'__UPLOAD__' => '/PersonWeb/index/Tpl/default/Upload',
-				'__IMG__' => '/PersonWeb/index/Tpl/default/images',
+				'__JS__' => '/PersonWeb/index/Tpl/default/Public/Js',
+				'__UPLOAD__' => '/PersonWeb/index/Tpl/default/Public/Upload',
+				'__IMG__' => '/PersonWeb/index/Tpl/default/Public/images',
 		
 		),
 );

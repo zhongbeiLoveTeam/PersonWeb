@@ -13,4 +13,8 @@ class IndexAction extends Action {
     public function index(){
 		$this->display();
     }
+    public function map(){
+    	//加载map页面
+    	$this->display();
+    }
 }
