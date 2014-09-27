@@ -1,6 +1,6 @@
 <?php
 /*
-// | MobileCms 移动应用软件后台管理系统
+// |sean的首页面
 // +----------------------------------------------------------------------
 // | provide by ：phonegap100.com
 // 
@@ -10,6 +10,11 @@
 */
 class BaseAction extends Action {
 	public function _initialize() {
+		/* 导航菜单 */
+		$menuModel=M('Menu');
+		$menuwhere['type']="1";
+		$menuresult=$menuModel->where($menuwhere)->order('sort')->limit(6)->select();
+		$this->assign('menu',$menuresult);
 	
 	}
 	
