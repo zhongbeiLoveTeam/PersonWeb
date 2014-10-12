@@ -19,6 +19,8 @@ class BaseAction extends Action {
 		$systemConfig = include WEB_ROOT . 'Common/systemConfig.php';
 		F("systemConfig", $systemConfig, WEB_ROOT . "Common/");
 		$this->assign("site", $systemConfig);
+		//网站配置
+		$this->assign('webset',M('Setting')->select());
 	}
 	//SEO赋值
 	public function seo($title,$keywords,$description,$positioin){

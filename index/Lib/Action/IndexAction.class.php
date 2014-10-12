@@ -14,10 +14,10 @@ class IndexAction extends BaseAction {
     	/*
     	 * 个人信息提取
     	 */
-    	$profileModel=M('Profile');
-    	$this->assign('myfrofile',$profileModel->select());
+    	$this->assign('myfrofile',M('Profile')->select());
     	//友情链接
     	$this->assign('link',M('Link')->where('status=1')->order('sort DESC')->select());
+    	
 		$this->display();
     }
     public function map(){
