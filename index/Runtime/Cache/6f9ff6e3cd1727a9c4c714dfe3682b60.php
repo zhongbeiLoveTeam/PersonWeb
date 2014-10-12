@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <!--[if lt IE 7]>    <html lang="en-US" dir="ltr" class=" lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>       <html lang="en-US" dir="ltr" class="lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>       <html lang="en-US" dir="ltr" class="lt-ie10 lt-ie9"> <![endif]-->
@@ -10,12 +10,31 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1" />
 	<![endif]-->
 	<meta charset="UTF-8" />
-	<title>{$webset['0']['site_title']}</title>
+	<title><?php echo ($webset['0']['site_title']); ?></title>
 	<meta name="viewport" content="width=600" />
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 	<meta name="format-detection" content="telephone=no" />
-	<include file="Common:intoHead" />
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,700' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" type="text/css" href="__CSS__/style.css" />
+<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png" />
+<!-- ColorBox Theme, you can use example1 - example5 -->
+<link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.3/example1/colorbox.css" />
+<!-- <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.3/example2/colorbox.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.3/example3/colorbox.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.3/example4/colorbox.css" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.3/example5/colorbox.css" /> -->
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
+
+
+<!--*** foot Scripts ***-->
+<script type="text/javascript" src="__JS__/jquery.min.js"></script>
+<!--[if !IE]><!-->
+<script type="text/javascript" src="__JS__/impress.js"></script>
+<!--<![endif]-->
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.colorbox/1.4.3/jquery.colorbox-min.js"></script>
+<script type="text/javascript" src="__JS__/script.js"></script>
 </head>
 <body class="preload impress-not-supported">
 	<!--*** Loading animated ***-->
@@ -25,7 +44,60 @@
 		</div>
 	</div>
 	<!--***主菜单 Menu 开始***-->
-	<include file="Common:menu" />
+	<div class="container-menu">
+		<nav class="mainmenu">
+			<ul>
+		<!-- 	<?php if(is_array($menu)): $i = 0; $__LIST__ = $menu;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><li>
+					<a class="fg-bgc" href="#<?php echo ($vo["url"]); ?>">
+						<span class="img-menu" id="about-ico"></span>
+						<span class="txt-menu"><?php echo ($vo["menu_name"]); ?></span>
+					</a>
+				</li><?php endforeach; endif; else: echo "" ;endif; ?> -->
+			 <li>
+					<a class="fg-bgc" href="#profile">
+						<span class="img-menu" id="resume-ico"></span>
+						<span class="txt-menu">我的资料</span>
+					</a>
+				</li>
+			 <li>
+					<a class="fg-bgc" href="#resume">
+						<span class="img-menu" id="resume-ico"></span>
+						<span class="txt-menu">我的简历</span>
+					</a>
+				</li>
+				<li>
+					<a class="fg-bgc" href="#forum">
+						<span class="img-menu" id="portfolio-ico"></span>
+						<span class="txt-menu">论坛</span>
+					</a>
+				</li>
+				<li>
+					<a class="fg-bgc" href="#article">
+						<span class="img-menu" id="portfolio-ico"></span>
+						<span class="txt-menu">今日随笔</span>
+					</a>
+				</li>
+				<li>
+					<a class="fg-bgc" href="#portfolio">
+						<span class="img-menu" id="portfolio-ico"></span>
+						<span class="txt-menu">下载专区</span>
+					</a>
+				</li>
+				<li>
+					<a class="fg-bgc" href="#contact">
+						<span class="img-menu" id="contact-ico"></span>
+						<span class="txt-menu">联系我Contact Me</span>
+					</a>
+				</li>
+				<li>
+					<a class="fg-bgc" href="#other">
+						<span class="img-menu" id="other-ico"></span>
+						<span class="txt-menu">其他Other</span>
+					</a>
+				</li> 
+			</ul>
+		</nav>
+	</div>
 	<!--***主菜单 Menu 结束 ***-->
 	
 	<!--*** 分页面 ***-->

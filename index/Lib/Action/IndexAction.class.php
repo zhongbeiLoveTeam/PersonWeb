@@ -11,6 +11,13 @@
 // 本类由系统自动生成，仅供测试用途
 class IndexAction extends BaseAction {
     public function index(){
+    	/*
+    	 * 个人信息提取
+    	 */
+    	$profileModel=M('Profile');
+    	$this->assign('myfrofile',$profileModel->select());
+    	//友情链接
+    	$this->assign('link',M('Link')->where('status=1')->order('sort DESC')->select());
 		$this->display();
     }
     public function map(){

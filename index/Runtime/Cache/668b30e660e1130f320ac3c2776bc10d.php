@@ -1,17 +1,4 @@
-
-2014/9/27 11:47:32
-马晓成 2014/9/27 11:47:32
-
-2014/10/8 11:58:32
-威武小子 2014/10/8 11:58:32
-
-
-威武小子 2014/10/8 11:58:51
-
-
-10:10:16
-马晓成 2014/10/12 10:10:16
-<!--引用百度地图API-->
+<?php if (!defined('THINK_PATH')) exit();?><!--引用百度地图API-->
 <style type="text/css">
     html,body{margin:0;padding:0;}
     .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
@@ -19,10 +6,10 @@
 </style>
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
-
 <body>
   <!--百度地图容器-->
   <div style="width:442px;height:420px;border:#ccc solid 1px;" id="dituContent"></div>
+>>>>>>> efb30728bd8144644a293416d9619c3a8a0618cc
 </body>
 <script type="text/javascript">
     //创建和初始化地图函数：

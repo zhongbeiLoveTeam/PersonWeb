@@ -752,7 +752,7 @@
     letter-spacing: 1px;
     font-size: 20px;
   }
-/* 5, Pages section
+/* 5,  页面部分的样式表Pages section
 ------------------------------------------------------------- */
   section.step {
     width: 950px;
@@ -768,7 +768,7 @@
     transition: opacity 1s;
     margin: 100px auto;
   }
-/* 5.1,  Page section
+/* 5.1, Page section
 ------------------------------------------------------------- */
   section._container.active figure.me #myqr,
   section._container.active figure.me #myimg {
