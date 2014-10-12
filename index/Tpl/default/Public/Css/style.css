@@ -548,7 +548,7 @@
 /* 3, Global section
 ------------------------------------------------------------- */
   body {
-    background-image: url("./Images/bckg/pattern-squares.png");
+    background-image: url("../Images/bckg/pattern-squares.png");
     -webkit-transition: all 200ms;
     -moz-transition: all 200ms;
     -o-transition: all 200ms;
@@ -567,7 +567,7 @@
     bottom: 0;
     left: 0;
     background-color: #f0f0f0;
-    background-image: url("./Images/bckg/pattern-squares.png");
+    background-image: url("../Images/bckg/pattern-squares.png");
     z-index: 9999;
     -webkit-transition: all 1000ms;
     -moz-transition: all 1000ms;
@@ -587,7 +587,7 @@
   body.preload div.loading-panel div.loading div#loading-gif {
     width: 64px;
     height: 64px;
-    background-image: url("./Images/preloading.gif");
+    background-image: url("../Images/preloading.gif");
     background-position: center top;
     background-repeat: no-repeat;
     margin: 0 auto;
@@ -720,7 +720,7 @@
     -webkit-border-radius: 10px 0px 0px 10px;
     border-radius: 10px 0px 0px 10px;
     padding-top: 1px;
-    background-image: url("./Images/title-bg.png");
+    background-image: url("../Images/title-bg.png");
   }
   div.container-menu nav.mainmenu ul li a span.img-menu {
     display: block;
@@ -728,7 +728,7 @@
     height: 40px;
     margin: 11px 0 0 12px;
     float: left;
-    background-image: url("./Images/menu_sprite.png");
+    background-image: url("../Images/menu_sprite.png");
     background-repeat: no-repeat;
   }
   div.container-menu nav.mainmenu ul li a #about-ico {
@@ -752,7 +752,7 @@
     letter-spacing: 1px;
     font-size: 20px;
   }
-/* 5, Pages section
+/* 5,  页面部分的样式表Pages section
 ------------------------------------------------------------- */
   section.step {
     width: 950px;
@@ -768,28 +768,28 @@
     transition: opacity 1s;
     margin: 100px auto;
   }
-/* 5.1, Profile Page section
+/* 5.1, Page section
 ------------------------------------------------------------- */
-  section.profile_container.active figure.me #myqr,
-  section.profile_container.active figure.me #myimg {
+  section._container.active figure.me #myqr,
+  section._container.active figure.me #myimg {
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     -ms-backface-visibility: hidden;
     backface-visibility: hidden;
     display: block;
   }
-/*Profile pic */
-  section.profile_container figure.me {
+/* pic */
+  section._container figure.me {
     height: 250px;
     width: 200px;
     margin-left: 16px;
     padding: 5px;
     outline: 1px solid #c7c7c7;
     position: relative;
-/* Profile pic hover flip animate */
+/*  pic hover flip animate */
   }
-  section.profile_container figure.me #myqr,
-  section.profile_container figure.me #myimg {
+  section._container figure.me #myqr,
+  section._container figure.me #myimg {
     -webkit-transition: -webkit-transform 1s;
     -moz-transition: -moz-transform 1s;
     -o-transition: -o-transform 1s;
@@ -800,16 +800,16 @@
     height: inherit;
     background-repeat: no-repeat;
   }
-  section.profile_container figure.me #myimg {
-    background-image: url("./Images/me.jpg");
+  section._container figure.me #myimg {
+    background-image: url("../Images/me.jpg");
   }
-  section.profile_container figure.me #myqr {
+  section._container figure.me #myqr {
     -webkit-transform: rotatey(-180deg);
     -moz-transform: rotatey(-180deg);
     -o-transform: rotatey(-180deg);
     -ms-transform: rotatey(-180deg);
     transform: rotatey(-180deg);
-    background-image: url("./Images/myqr.png");
+    background-image: url("../Images/myqr.png");
     background-position: center bottom;
     font-weight: bold;
     text-align: center;
@@ -841,7 +841,7 @@
     margin-top: 5px;
     width: 310px;
     min-height: 230px;
-    background-image: url("./Images/personal-info-sep.png");
+    background-image: url("../Images/personal-info-sep.png");
     background-repeat: no-repeat;
     background-position: 0 44px;
     padding: 20px 0 0 20px;
@@ -900,7 +900,7 @@
     cursor: pointer;
     float: left;
     color: #fff;
-    background-image: url("./Images/icon-set.png");
+    background-image: url("../Images/icon-set.png");
     background-repeat: no-repeat;
     background-position: 20px -290px;
   }
@@ -917,7 +917,7 @@
     margin-right: 2px;
   }
   section.profile_container ul.social li a {
-    background-image: url("./Images/socialis.png");
+    background-image: url("../Images/socialis.png");
     width: 45px;
     height: 45px;
     display: block;
@@ -987,14 +987,14 @@
   section.resume_container ul.exp-list li {
     margin: 15px 0 0 0;
     padding: 0 0 0 40px;
-    background: url("./Images/icon-set.png") no-repeat 2px 4px;
+    background: url("../Images/icon-set.png") no-repeat 2px 4px;
   }
   section.resume_container ul.edu-list li span,
   section.resume_container ul.exp-list li span {
     color: #888;
   }
   section.resume_container ul.exp-list li {
-    background: url("./Images/icon-set.png") no-repeat 2px -95px;
+    background: url("../Images/icon-set.png") no-repeat 2px -95px;
   }
   section.resume_container section.job {
     min-height: 260px;
@@ -1029,7 +1029,7 @@
     -webkit-border-radius: 3px 3px 0 0;
     border-radius: 3px 3px 0 0;
     cursor: pointer;
-    background-image: url("./Images/pattern.png");
+    background-image: url("../Images/pattern.png");
     -webkit-animation: animatebar 3s linear infinite;
     -moz-animation: animatebar 3s linear infinite;
     -o-animation: animatebar 3s linear infinite;
@@ -1187,7 +1187,7 @@
     opacity: 0;
     -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
     filter: alpha(opacity=0);
-    background-image: url("./Images/hover_image.png");
+    background-image: url("../Images/hover_image.png");
     background-color: #000;
     background-repeat: no-repeat;
     background-position: center;
@@ -1380,7 +1380,7 @@
     padding: 5px 60px 5px 20px;
     -webkit-border-radius: 20px 0 0 20px;
     border-radius: 20px 0 0 20px;
-    background-image: url("./Images/title-bg.png") !important;
+    background-image: url("../Images/title-bg.png") !important;
   }
   h1 span.h1-corner {
     float: left;
@@ -1405,6 +1405,7 @@
   }
 /* 5.4, Contact Page section
 ------------------------------------------------------------- */
+  /* 谷歌地图 */
   section.contact_container div.map {
     width: 440px;
     height: 450px;
@@ -1420,6 +1421,7 @@
     border: none 0;
     overflow: hidden;
   }
+   /* 谷歌地图 */
   section.contact_container form {
     width: 420px;
     min-height: 280px;
@@ -1489,7 +1491,7 @@
   section.contact_container div.contact-info p {
     margin: 10px 0 0;
     padding: 2px 2px 2px 30px;
-    background: url("./Images/icon-set.png") no-repeat;
+    background: url("../Images/icon-set.png") no-repeat;
   }
   section.contact_container div.contact-info #address {
     background-position: 0 -288px;
@@ -1535,7 +1537,7 @@
   section.feature_container ul.feature-list li {
     margin: 15px 0 0 0;
     padding: 0 0 0 40px;
-    background-image: url("./Images/icon-set.png");
+    background-image: url("../Images/icon-set.png");
     background-repeat: no-repeat;
     background-position: 2px -400px;
   }
@@ -1799,352 +1801,352 @@
     background-color: #966fd6;
   }
   .pattern-card {
-    background-image: url("./Images/bckg/pattern-card.jpg");
+    background-image: url("../Images/bckg/pattern-card.jpg");
   }
   .skin-selector .pattern-card {
-    background-image: url("./Images/bckg/thumb/pattern-card.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-card.jpg");
   }
   .pattern-arches {
-    background-image: url("./Images/bckg/pattern-arches.png");
+    background-image: url("../Images/bckg/pattern-arches.png");
   }
   .skin-selector .pattern-arches {
-    background-image: url("./Images/bckg/thumb/pattern-arches.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-arches.jpg");
   }
   .pattern-squares {
-    background-image: url("./Images/bckg/pattern-squares.png");
+    background-image: url("../Images/bckg/pattern-squares.png");
   }
   .skin-selector .pattern-squares {
-    background-image: url("./Images/bckg/thumb/pattern-squares.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-squares.jpg");
   }
   .pattern-squares2 {
-    background-image: url("./Images/bckg/pattern-squares2.png");
+    background-image: url("../Images/bckg/pattern-squares2.png");
   }
   .skin-selector .pattern-squares2 {
-    background-image: url("./Images/bckg/thumb/pattern-squares2.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-squares2.jpg");
   }
   .tile {
-    background-image: url("./Images/bckg/tile.png");
+    background-image: url("../Images/bckg/tile.png");
   }
   .skin-selector .tile {
-    background-image: url("./Images/bckg/thumb/tile.jpg");
+    background-image: url("../Images/bckg/thumb/tile.jpg");
   }
   .tile2 {
-    background-image: url("./Images/bckg/tile2.png");
+    background-image: url("../Images/bckg/tile2.png");
   }
   .skin-selector .tile2 {
-    background-image: url("./Images/bckg/thumb/tile2.jpg");
+    background-image: url("../Images/bckg/thumb/tile2.jpg");
   }
   .tile3 {
-    background-image: url("./Images/bckg/tile3.png");
+    background-image: url("../Images/bckg/tile3.png");
   }
   .skin-selector .tile3 {
-    background-image: url("./Images/bckg/thumb/tile3.jpg");
+    background-image: url("../Images/bckg/thumb/tile3.jpg");
   }
   .tile4 {
-    background-image: url("./Images/bckg/tile4.png");
+    background-image: url("../Images/bckg/tile4.png");
   }
   .skin-selector .tile4 {
-    background-image: url("./Images/bckg/thumb/tile4.jpg");
+    background-image: url("../Images/bckg/thumb/tile4.jpg");
   }
   .pattern-brushed {
-    background-image: url("./Images/bckg/pattern-brushed.png");
+    background-image: url("../Images/bckg/pattern-brushed.png");
   }
   .skin-selector .pattern-brushed {
-    background-image: url("./Images/bckg/thumb/pattern-brushed.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-brushed.jpg");
   }
   .pattern-paper {
-    background-image: url("./Images/bckg/pattern-paper.png");
+    background-image: url("../Images/bckg/pattern-paper.png");
   }
   .skin-selector .pattern-paper {
-    background-image: url("./Images/bckg/thumb/pattern-paper.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-paper.jpg");
   }
   .pattern-old-paper {
-    background-image: url("./Images/bckg/pattern-old-paper.jpg");
+    background-image: url("../Images/bckg/pattern-old-paper.jpg");
   }
   .skin-selector .pattern-old-paper {
-    background-image: url("./Images/bckg/thumb/pattern-old-paper.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-old-paper.jpg");
   }
   .pattern-grid {
-    background-image: url("./Images/bckg/pattern-grid.png");
+    background-image: url("../Images/bckg/pattern-grid.png");
   }
   .skin-selector .pattern-grid {
-    background-image: url("./Images/bckg/thumb/pattern-grid.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-grid.jpg");
   }
   .pattern-dots {
-    background-image: url("./Images/bckg/pattern-dots.png");
+    background-image: url("../Images/bckg/pattern-dots.png");
   }
   .skin-selector .pattern-dots {
-    background-image: url("./Images/bckg/thumb/pattern-dots.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-dots.jpg");
   }
   .pattern-lines {
-    background-image: url("./Images/bckg/pattern-lines.png");
+    background-image: url("../Images/bckg/pattern-lines.png");
   }
   .skin-selector .pattern-lines {
-    background-image: url("./Images/bckg/thumb/pattern-lines.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-lines.jpg");
   }
   .pattern-birds {
-    background-image: url("./Images/bckg/pattern-birds.png");
+    background-image: url("../Images/bckg/pattern-birds.png");
   }
   .skin-selector .pattern-birds {
-    background-image: url("./Images/bckg/thumb/pattern-birds.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-birds.jpg");
   }
   .pattern-blueprint {
-    background-image: url("./Images/bckg/pattern-blueprint.png");
+    background-image: url("../Images/bckg/pattern-blueprint.png");
   }
   .skin-selector .pattern-blueprint {
-    background-image: url("./Images/bckg/thumb/pattern-blueprint.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-blueprint.jpg");
   }
   .pattern-dark {
-    background-image: url("./Images/bckg/pattern-dark.png");
+    background-image: url("../Images/bckg/pattern-dark.png");
   }
   .skin-selector .pattern-dark {
-    background-image: url("./Images/bckg/thumb/pattern-dark.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-dark.jpg");
   }
   .pattern-dark2 {
-    background-image: url("./Images/bckg/pattern-dark2.png");
+    background-image: url("../Images/bckg/pattern-dark2.png");
   }
   .skin-selector .pattern-dark2 {
-    background-image: url("./Images/bckg/thumb/pattern-dark2.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-dark2.jpg");
   }
   .pattern-dark-lines {
-    background-image: url("./Images/bckg/pattern-dark-lines.png");
+    background-image: url("../Images/bckg/pattern-dark-lines.png");
   }
   .skin-selector .pattern-dark-lines {
-    background-image: url("./Images/bckg/thumb/pattern-dark-lines.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-dark-lines.jpg");
   }
   .pattern-carbon {
-    background-image: url("./Images/bckg/pattern-carbon.png");
+    background-image: url("../Images/bckg/pattern-carbon.png");
   }
   .skin-selector .pattern-carbon {
-    background-image: url("./Images/bckg/thumb/pattern-carbon.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-carbon.jpg");
   }
   .pattern-carbon2 {
-    background-image: url("./Images/bckg/pattern-carbon2.png");
+    background-image: url("../Images/bckg/pattern-carbon2.png");
   }
   .skin-selector .pattern-carbon2 {
-    background-image: url("./Images/bckg/thumb/pattern-carbon2.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-carbon2.jpg");
   }
   .pattern-metal {
-    background-image: url("./Images/bckg/pattern-metal.png");
+    background-image: url("../Images/bckg/pattern-metal.png");
   }
   .skin-selector .pattern-metal {
-    background-image: url("./Images/bckg/thumb/pattern-metal.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-metal.jpg");
   }
   .pattern-wood {
-    background-image: url("./Images/bckg/pattern-wood.png");
+    background-image: url("../Images/bckg/pattern-wood.png");
   }
   .skin-selector .pattern-wood {
-    background-image: url("./Images/bckg/thumb/pattern-wood.jpg");
+    background-image: url("../Images/bckg/thumb/pattern-wood.jpg");
   }
   .blur-home {
-    background-image: url("./Images/bckg/blur_home.jpg");
+    background-image: url("../Images/bckg/blur_home.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-home {
-    background-image: url("./Images/bckg/thumb/blur_home.jpg");
+    background-image: url("../Images/bckg/thumb/blur_home.jpg");
   }
   .blur-office {
-    background-image: url("./Images/bckg/blur_office.jpg");
+    background-image: url("../Images/bckg/blur_office.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-office {
-    background-image: url("./Images/bckg/thumb/blur_office.jpg");
+    background-image: url("../Images/bckg/thumb/blur_office.jpg");
   }
   .blur-road {
-    background-image: url("./Images/bckg/blur_road.jpg");
+    background-image: url("../Images/bckg/blur_road.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-road {
-    background-image: url("./Images/bckg/thumb/blur_road.jpg");
+    background-image: url("../Images/bckg/thumb/blur_road.jpg");
   }
   .blur-balls {
-    background-image: url("./Images/bckg/blur_balls.jpg");
+    background-image: url("../Images/bckg/blur_balls.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-balls {
-    background-image: url("./Images/bckg/thumb/blur_balls.jpg");
+    background-image: url("../Images/bckg/thumb/blur_balls.jpg");
   }
   .blur-bargs {
-    background-image: url("./Images/bckg/blur_bargs.jpg");
+    background-image: url("../Images/bckg/blur_bargs.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-bargs {
-    background-image: url("./Images/bckg/thumb/blur_bargs.jpg");
+    background-image: url("../Images/bckg/thumb/blur_bargs.jpg");
   }
   .blur-bubbles {
-    background-image: url("./Images/bckg/blur_bubbles.jpg");
+    background-image: url("../Images/bckg/blur_bubbles.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-bubbles {
-    background-image: url("./Images/bckg/thumb/blur_bubbles.jpg");
+    background-image: url("../Images/bckg/thumb/blur_bubbles.jpg");
   }
   .blur-cabbage {
-    background-image: url("./Images/bckg/blur_cabbage.jpg");
+    background-image: url("../Images/bckg/blur_cabbage.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-cabbage {
-    background-image: url("./Images/bckg/thumb/blur_cabbage.jpg");
+    background-image: url("../Images/bckg/thumb/blur_cabbage.jpg");
   }
   .blur-dooks {
-    background-image: url("./Images/bckg/blur_dooks.jpg");
+    background-image: url("../Images/bckg/blur_dooks.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-dooks {
-    background-image: url("./Images/bckg/thumb/blur_dooks.jpg");
+    background-image: url("../Images/bckg/thumb/blur_dooks.jpg");
   }
   .blur-focus {
-    background-image: url("./Images/bckg/blur_focus.jpg");
+    background-image: url("../Images/bckg/blur_focus.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-focus {
-    background-image: url("./Images/bckg/thumb/blur_focus.jpg");
+    background-image: url("../Images/bckg/thumb/blur_focus.jpg");
   }
   .blur-frosty {
-    background-image: url("./Images/bckg/blur_frosty.jpg");
+    background-image: url("../Images/bckg/blur_frosty.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-frosty {
-    background-image: url("./Images/bckg/thumb/blur_frosty.jpg");
+    background-image: url("../Images/bckg/thumb/blur_frosty.jpg");
   }
   .blur-golden {
-    background-image: url("./Images/bckg/blur_golden.jpg");
+    background-image: url("../Images/bckg/blur_golden.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-golden {
-    background-image: url("./Images/bckg/thumb/blur_golden.jpg");
+    background-image: url("../Images/bckg/thumb/blur_golden.jpg");
   }
   .blur-leaf {
-    background-image: url("./Images/bckg/blur_leaf.jpg");
+    background-image: url("../Images/bckg/blur_leaf.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-leaf {
-    background-image: url("./Images/bckg/thumb/blur_leaf.jpg");
+    background-image: url("../Images/bckg/thumb/blur_leaf.jpg");
   }
   .blur-lights {
-    background-image: url("./Images/bckg/blur_lights.jpg");
+    background-image: url("../Images/bckg/blur_lights.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-lights {
-    background-image: url("./Images/bckg/thumb/blur_lights.jpg");
+    background-image: url("../Images/bckg/thumb/blur_lights.jpg");
   }
   .blur-maple {
-    background-image: url("./Images/bckg/blur_maple.jpg");
+    background-image: url("../Images/bckg/blur_maple.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-maple {
-    background-image: url("./Images/bckg/thumb/blur_maple.jpg");
+    background-image: url("../Images/bckg/thumb/blur_maple.jpg");
   }
   .blur-maple2 {
-    background-image: url("./Images/bckg/blur_maple2.jpg");
+    background-image: url("../Images/bckg/blur_maple2.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-maple2 {
-    background-image: url("./Images/bckg/thumb/blur_maple2.jpg");
+    background-image: url("../Images/bckg/thumb/blur_maple2.jpg");
   }
   .blur-nicecolors {
-    background-image: url("./Images/bckg/blur_nicecolors.jpg");
+    background-image: url("../Images/bckg/blur_nicecolors.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-nicecolors {
-    background-image: url("./Images/bckg/thumb/blur_nicecolors.jpg");
+    background-image: url("../Images/bckg/thumb/blur_nicecolors.jpg");
   }
   .blur-shoes {
-    background-image: url("./Images/bckg/blur_shoes.jpg");
+    background-image: url("../Images/bckg/blur_shoes.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-shoes {
-    background-image: url("./Images/bckg/thumb/blur_shoes.jpg");
+    background-image: url("../Images/bckg/thumb/blur_shoes.jpg");
   }
   .blur-suntree {
-    background-image: url("./Images/bckg/blur_suntree.jpg");
+    background-image: url("../Images/bckg/blur_suntree.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-suntree {
-    background-image: url("./Images/bckg/thumb/blur_suntree.jpg");
+    background-image: url("../Images/bckg/thumb/blur_suntree.jpg");
   }
   .blur-wood {
-    background-image: url("./Images/bckg/blur_wood.jpg");
+    background-image: url("../Images/bckg/blur_wood.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .blur-wood {
-    background-image: url("./Images/bckg/thumb/blur_wood.jpg");
+    background-image: url("../Images/bckg/thumb/blur_wood.jpg");
   }
   .greenbf {
-    background-image: url("./Images/bckg/greenbf.jpg");
+    background-image: url("../Images/bckg/greenbf.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .greenbf {
-    background-image: url("./Images/bckg/thumb/greenbf.jpg");
+    background-image: url("../Images/bckg/thumb/greenbf.jpg");
   }
   .nicecolors {
-    background-image: url("./Images/bckg/nicecolors.jpg");
+    background-image: url("../Images/bckg/nicecolors.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
   }
   .skin-selector .nicecolors {
-    background-image: url("./Images/bckg/thumb/nicecolors.jpg");
+    background-image: url("../Images/bckg/thumb/nicecolors.jpg");
   }
   .fg-bgc {
     background-color: #f7cc52;
