@@ -9,23 +9,20 @@
 // +----------------------------------------------------------------------
 class UserAction extends BaseAction{
 	public function index(){
-        $mod=D("user"); 
-        $pagesize=20;        
-        import("ORG.Util.Page");
-		$where=" 1=1 ";
-		if(isset($_REQUEST['keyword'])){
-			$keys = $_REQUEST['keyword'];
-			$this->assign('keyword',$keys);
-			$where.=" and name like '%$keys%'";
-		}
-		$count=$mod->where($where)->count();		
-		$p = new Page($count,$pagesize);		
-		$list=$mod->where($where)->order("last_time desc")->limit($p->firstRow.','.$p->listRows)->select();
-		$page=$p->show();  
-		$this->assign('list',$list);
+        $user_mod = D('user');
+		import("ORG.Util.Page");
+		$count = $user_mod->count();
+		$p = new Page($count,20);
+		$user_list = $user_mod->limit($p->firstRow.','.$p->listRows)->select();
+		
+		$page = $p->show();
 		$this->assign('page',$page);
+		
+		$this->assign('user_list',$user_list);
 		$this->display();
+		
 	}
+		
 	function edit(){
 		if (isset($_POST['dosubmit'])) {
 			$mod = D('user');		
