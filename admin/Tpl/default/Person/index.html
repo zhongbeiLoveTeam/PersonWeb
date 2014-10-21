@@ -1,0 +1,100 @@
+<tagLib name="tpl" />
+<include file="Public:header" />
+<div class="pad-10" >
+   
+    <form id="myform" name="myform" action="{:u('Person/delete')}" method="post" onsubmit="return check();">
+    <div class="table-list">
+    <table width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th width="50">ID</th>
+                <th width=15><input type="checkbox" value="" id="check_box" onclick="selectall('id[]');"></th>
+                <th width=80>姓名</th>
+                <th width=80>昵称</th>
+				<th width=80>国籍</th>							
+				<th width=80>民族</th>			
+				<th width=60>性别</th>
+		        <th width=80>自我评价</th>
+                <th width=80>工作经验</th>  
+                <th width=80>身高</th>
+				<th width=80>体重</th>							
+				<th width=80>现居住地</th>			
+				<th width=60>生日</th>
+				
+                <th width=80>电话</th>
+                <th width=80>个性签名</th>							
+				<th width=80>创建时间</th>			
+				<th width=60>开放</th>
+				<th width=60>点击量</th> 
+                <th width=80>附件名称</th>
+                <th width=80>附件地址</th>
+                <th width="80">编辑</th>
+            </tr>
+        </thead>
+    	<tbody>
+        <volist name="person_list" id="val" key="k">          
+        <tr>
+        	 <td align="center"><a href="{:u('/Person/edit', array('id'=>$val['id']))}">{$val.id}</a></td> 	
+             <td align="center"><input type="checkbox" value="{$val.id}" name="id[]"></td>
+             <td  align="center">{$val.name}</td>
+             <td  align="center">{$val.nickname}</td>
+		 	 <td  align="center">{$val.nationality}</td>
+		     <td  align="center">{$val.nation}</td>
+		     <td align="center">
+	           <if condition="$val.gender eq '0'">
+	           男
+	           <elseif condition="$val.gender eq '1'"/>
+	           女
+	           <else/>
+	           保密
+	           </if>
+            </td>		
+		     <td  align="center">{$val.assessment}</td>
+		     <td  align="center">{$val.work_exper}</td>
+		     <td  align="center">{$val.height}</td>
+             <td  align="center">{$val.weight}</td>
+		 	
+		     <td  align="center">{$val.live_address}</td>
+		     <td  align="center">{$val.birthdayshenri}</td>
+             
+		 	 <td  align="center">{$val.tel}</td>
+		     <td  align="center">{$val.signature}</td>
+		     <td  align="center">{$val.create_time}</td>
+             <td  align="center">{$val.isLock}</td>
+		 	 <td  align="center">{$val.click}</td>
+		     <td  align="center">{$val.attachment_name}</td>
+		     <td  align="center">{$val.attachment_site}</td>
+            
+            <td align="center"><a class="blue" href="{:u('Person/edit', array('id'=>$val['id']))}">编辑</a></td>
+		   </tr>
+        </volist>
+    	</tbody>
+    </table>
+    <div class="btn">
+    	<!-- <label for="check_box" style="float:left;">全选/取消</label>
+    	<input type="submit" class="button" name="dosubmit" value="{$Think.lang.delete}" onclick="return confirm('{$Think.lang.sure_delete}')" style="float:left;margin:0 10px 0 30px;"/> -->
+    	<div id="pages">{$page}</div>
+    </div>
+    </div>
+    </form>
+</div>
+
+<script language="javascript">
+function edit(id, name) {
+	var lang_edit = "{$Think.lang.edit}";
+	window.top.art.dialog({id:'edit'}).close();
+	window.top.art.dialog({title:lang_edit+'--'+name,id:'edit',iframe:'?m=Person&a=edit&id='+id,width:'520',height:'400'}, 
+		function(){
+			var d = window.top.art.dialog({id:'edit'}).data.iframe;
+			d.document.getElementById('dosubmit').click();
+			return false;
+		}, 
+		function(){
+			window.top.art.dialog({id:'edit'}).close();
+		}
+	);
+}
+
+</script>
+</body>
+</html>
