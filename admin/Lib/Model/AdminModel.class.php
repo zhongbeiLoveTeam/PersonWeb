@@ -33,5 +33,4 @@ class AdminModel extends RelationModel
             return true;
         }
     }
-    
 }

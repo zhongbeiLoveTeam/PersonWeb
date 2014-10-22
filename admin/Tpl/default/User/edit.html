@@ -4,8 +4,8 @@
         <input type="hidden" name="id" value="{$info.id}" />
         <table width="100%" cellpadding="2" cellspacing="1" class="table_form">
             <tr>
-                <th width="60">昵称:</th>
-                <td><input type="text" name="nickname" id="nickname" size="25" value="{$info.nickname}" ></td>
+                <th width="60">{:L('name')}:</th>
+                <td><input type="text" name="name" id="name" size="25" value="{$info.name}" ></td>
             </tr>
 			<tr>
                 <th width="60">会员密码:</th>
@@ -22,18 +22,24 @@
                 <th width="60">{:L('email')} :</th>
                 <td><input type="text" name="email" id="email" size="25" value="{$info.email}" ></td>
             </tr>
-			
+			<tr>
+                <th>{:L('sex')} :</th>
+                <td><input type="radio" name="sex" value="0" <if condition="$info.sex eq '0'"> checked</if>>&nbsp;男&nbsp;&nbsp;&nbsp; 
+					<input type="radio" name="sex" value="1" <if condition="$info.sex eq '1'"> checked</if>>&nbsp;女&nbsp;&nbsp;&nbsp; 
+					<input type="radio" name="sex" value="2" <if condition="$info.sex eq '2'"> checked</if>>&nbsp;未知					
+				</td>
+            </tr>
             <tr>
                 <th>{:L('status')} :</th>
-                <td><input type="radio" name="status" value="1"<if condition="$info.status eq 1"> checked</if>>&nbsp;已审核&nbsp;&nbsp;&nbsp; 
-                    <input type="radio" name="status" value="0" <if condition="$info.status eq 0"> checked</if>>&nbsp;未审核</td>
+                <td><input type="radio" name="status" value="1" 
+                    <if condition="$info.status eq 1"> checked</if>
+                    >&nbsp;已审核&nbsp;&nbsp;&nbsp; <input type="radio" name="status" value="0" 
+                    <if condition="$info.status eq 0"> checked</if>
+                    >&nbsp;未审核</td>
             </tr>
         </table>
        
-       <!--  <input type="submit" name="dosubmit" id="dosubmit" class="dialog" value="提交"> -->
-         <div class="btn">
-    <input type="submit" value="{$Think.lang.submit}" name="dosubmit"  class="button" id="dosubmit">
-        </div>
+        <input type="submit" name="dosubmit" id="dosubmit" class="dialog" value="">
         
       
     </form>

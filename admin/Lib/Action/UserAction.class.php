@@ -49,50 +49,6 @@ class UserAction extends BaseAction{
 			$this->display();
 		}
 	}
-	
-	function add()
-	{
-		if(isset($_POST['dosubmit'])){
-			$user_mod = D('user');
-			if($_POST['account']==''){
-				$this->error(L('input').L('user_account'));
-			}
-			if(false === $data = $user_mod->create()){
-				$this->error($user_mod->error());
-			}
-			if ($_FILES['img']['name']!='') {
-				$upload_list = $this->_upload();
-				$data['img'] = $upload_list['0']['savename'];
-			}
-			$data['add_time']=date('Y-m-d H:i:s',time());
-			$result = $user_mod->add($data);
-			if($result){
-				$cate = M('user_cate')->field('id,pid')->where("id=".$data['cate_id'])->find();
-				if( $cate['pid']!=0 ){
-					M('user_cate')->where("id=".$cate['pid'])->setInc('user_nums');
-					M('user_cate')->where("id=".$data['cate_id'])->setInc('user_nums');
-				}else{
-					M('user_cate')->where("id=".$data['cate_id'])->setInc('user_nums');
-				}
-				$this->success('添加成功');
-			}else{
-				$this->error('添加失败');
-			}
-		}else{
-			$user_cate_mod = D('user_cate');
-			$result = $user_cate_mod->order('sort_order ASC')->select();
-			$cate_list = array();
-			foreach ($result as $val) {
-				if ($val['pid']==0) {
-					$cate_list['parent'][$val['id']] = $val;
-				} else {
-					$cate_list['sub'][$val['pid']][] = $val;
-				}
-			}
-			$this->assign('cate_list',$cate_list);
-			$this->display();
-		}
-	}
 	//暂时注释掉
 //	public function setscore(){
 //		$setting_mod = M('setting');
