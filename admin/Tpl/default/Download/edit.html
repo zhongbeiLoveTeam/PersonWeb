@@ -1,0 +1,45 @@
+<include file="Public:header" />
+<div class="pad_10">
+    <form action="{:u('Download/edit')}" method="post" name="myform" id="myform" enctype="multipart/form-data" >
+        <input type="hidden" name="id" value="{$info.id}" />
+        <table width="100%" cellpadding="2" cellspacing="1" class="table_form">
+            <tr>
+                <th width="60">资料名字:</th>
+                <td><input type="text" name="material_name" id="material_name" size="25" value="{$info.material_name}" ></td>
+            </tr>
+            <tr>
+                <th width="60">资料类型:</th>
+                <td><input type="text" name="material_type" id="material_type" size="25" value="{$info.material_type}" ></td>
+            </tr>
+            <tr>
+                <th width="60">资料地址:</th>
+                <td><input type="text" name="material_site" id="material_site" size="25" value="{$info.material_site}" ></td>
+            </tr>
+            <tr>
+                <th width="60">上传时间:</th>
+                <td><input type="text" name="uploadtime" id="uploadtime" size="25" value="{$info.uploadtime}" ></td>
+            </tr>
+            <tr>
+                <th width="60">上传路径:</th>
+                <td><input type="text" name="uploadname" id="uploadname" size="25" value="{$info.uploadname}" ></td>
+            </tr>
+           
+			
+          
+        </table>
+       
+         <div class="btn">
+    <input type="submit" value="{$Think.lang.submit}" name="dosubmit"  class="button" id="dosubmit">
+        </div>
+        
+      
+    </form>
+    <script type="text/javascript">
+	$(function(){
+		$.formValidator.initConfig({formid:"myform",autotip:true,onerror:function(msg,obj){window.top.art.dialog({content:msg,lock:true,width:'250',height:'50'}, function(){this.close();$(obj).focus();})}});
+		$("#name").formValidator({onshow:"不能为空",onfocus:"不能为空"}).inputValidator({min:1,onerror:"请填写链接名称"});
+		//$("#url").formValidator({onshow:"不能为空",onfocus:"http开头"}).inputValidator({min:1,onerror:"请填写链接地址"});
+	})
+</script>
+</div>
+</body></html>

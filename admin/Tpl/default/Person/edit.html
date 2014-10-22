@@ -1,0 +1,75 @@
+<include file="Public:header" />
+<div class="pad_10">
+    <form action="{:u('Person/edit')}" method="post" name="myform" id="myform" enctype="multipart/form-data" >
+        <input type="hidden" name="id" value="{$info.id}" />
+        <table width="100%" cellpadding="2" cellspacing="1" class="table_form">
+            <tr>
+                <th width="60">昵称:</th>
+                <td><input type="text" name="nickname" id="nickname" size="25" value="{$info.nickname}" ></td>
+            </tr>
+            <tr>
+                <th width="60">国籍:</th>
+                <td><input type="text" name="nationality" id="nationality" size="25" value="{$info.nationality}" ></td>
+            </tr>
+            <tr>
+                <th width="60">自我评价:</th>
+                <td><input type="text" name="assessment" id="assessment" size="25" value="{$info.assessment}" ></td>
+            </tr>
+            <tr>
+                <th width="60">工作经验:</th>
+                <td><input type="text" name="work_exper" id="work_exper" size="25" value="{$info.work_exper}" ></td>
+            </tr>
+            <tr>
+                <th width="60">身高:</th>
+                <td><input type="text" name="height" id="height" size="25" value="{$info.height}" ></td>
+            </tr>
+            <tr>
+                <th width="60">体重:</th>
+                <td><input type="text" name="weight" id="weight" size="25" value="{$info.weight}" ></td>
+            </tr>
+            <tr>
+                <th width="60">现居住地:</th>
+                <td><input type="text" name="live_address" id="live_address" size="25" value="{$info.live_address}" ></td>
+            </tr>
+            <tr>
+                <th width="60">生日:</th>
+                <td><input type="text" name="birthdayshenri" id="birthdayshenri" size="25" value="{$info.birthdayshenri}" ></td>
+            </tr>
+           
+            <tr>
+                <th width="60">电话:</th>
+                <td><input type="text" name="tel" id="tel" size="25" value="{$info.tel}" ></td>
+            </tr>
+             <tr>
+                <th width="60">个性签名:</th>
+                <td><input type="text" name="signature" id="signature" size="25" value="{$info.signature}" ></td>
+            </tr>
+            <tr>
+                <th width="60">附件名称:</th>
+                <td><input type="text" name="attachment_name" id="attachment_name" size="25" value="{$info.attachment_name}" ></td>
+            </tr>
+            
+			
+			<tr>
+                <th width="60">附件地址 :</th>
+                <td><input type="text" name="attachment_site" id="attachment_site" size="25" value="{$info.attachment_site}" ></td>
+            </tr>
+			
+          
+        </table>
+       
+         <div class="btn">
+    <input type="submit" value="{$Think.lang.submit}" name="dosubmit"  class="button" id="dosubmit">
+        </div>
+        
+      
+    </form>
+    <script type="text/javascript">
+	$(function(){
+		$.formValidator.initConfig({formid:"myform",autotip:true,onerror:function(msg,obj){window.top.art.dialog({content:msg,lock:true,width:'250',height:'50'}, function(){this.close();$(obj).focus();})}});
+		$("#name").formValidator({onshow:"不能为空",onfocus:"不能为空"}).inputValidator({min:1,onerror:"请填写链接名称"});
+		//$("#url").formValidator({onshow:"不能为空",onfocus:"http开头"}).inputValidator({min:1,onerror:"请填写链接地址"});
+	})
+</script>
+</div>
+</body></html>

@@ -1,0 +1,72 @@
+<tagLib name="tpl" />
+<include file="Public:header" />
+<div class="pad-10" >
+     <form id="myform" name="myform" action="{:u('Download/delete')}" method="post" onsubmit="return check();">
+    <div class="table-list">
+    <table width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th width=50>ID</th>
+                <th width=25><input type="checkbox" value="" id="check_box" onclick="selectall('id[]');"></th>               
+                <th width=280>资料名称</th>
+                <th width=150>资料地址</th>
+                <th width=60>上传者</th>
+                <th width="40">上传时间</th>
+                <th width="40">URL</th>
+				<th width="80">编辑</th>
+            </tr>
+        </thead>
+    	<tbody>
+        <volist name="download_list" id="val" >
+        <tr>       
+		 	<td align="center"><a href="{:u('Download/edit', array('id'=>$val['id']))}">{$val.id}</a></td> 	
+            <td align="center">
+           	 <input type="checkbox" value="{$val.id}" name="id[]">
+			</td>           
+            <td align="center">{$val.material_name}</td>
+            <td align="center">{$val.material_site}</td>
+            <td align="center">{$val.uploadedby}</td>
+            <td align="center">{$val.uploadtime}</td>
+            <td align="center">{$val.uploadname}</td>
+          
+            
+			<td align="center"><a class="blue" href="{:u('Download/edit', array('id'=>$val['id']))}">编辑</a></td>
+			</tr>
+        </volist>
+    	</tbody>
+    </table>
+
+    <div class="btn">
+    	<label for="check_box" style="float:left;">{$Think.lang.select_all}/{$Think.lang.cancel}</label>
+    	<input type="submit" class="button" name="dosubmit" value="{$Think.lang.delete}" onclick="return confirm('{$Think.lang.sure_delete}')" style="float:left;margin:0 10px 0 10px;"/>
+    	
+    	<div id="pages">{$page}</div>
+    </div>
+
+    </div>
+    </form>
+</div>
+<script language="javascript">
+function edit(id, name) {
+	var lang_edit = "{$Think.lang.edit}";
+	window.top.art.dialog({id:'edit'}).close();
+	window.top.art.dialog({title:lang_edit+'--'+name,id:'edit',iframe:'?m=Download&a=edit&id='+id,width:'520',height:'400'}, 
+		function(){
+			var d = window.top.art.dialog({id:'edit'}).data.iframe;
+			d.document.getElementById('dosubmit').click();
+			return false;
+		}, 
+		function(){
+			window.top.art.dialog({id:'edit'}).close();
+		}
+	);
+}
+function status(id,type){
+    $.get("{:u('Download/status')}", { id: id, type: type }, function(jsondata){
+		var return_data  = eval("("+jsondata+")");
+		$("#"+type+"_"+id+" img").attr('src', '__ROOT__/statics/images/status_'+return_data+'.gif')
+	}); 
+}
+</script>
+</body>
+</html>
