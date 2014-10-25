@@ -7,44 +7,38 @@
 // +----------------------------------------------------------------------
 // | Author: htzhanglong@foxmail.com
 // +----------------------------------------------------------------------
-class UserAction extends BaseAction{
+class DownloadAction extends BaseAction{
 	public function index(){
-        $user_mod = D('user');
+        $download_mod = D('material');
 		import("ORG.Util.Page");
-		$count = $user_mod->count();
+		$count = $download_mod->count();
 		$p = new Page($count,20);
-		$user_list = $user_mod->limit($p->firstRow.','.$p->listRows)->select();
-		
+		$download_list = $download_mod->limit($p->firstRow.','.$p->listRows)->select();
 		$page = $p->show();
 		$this->assign('page',$page);
-		
-		$this->assign('user_list',$user_list);
+		$this->assign('download_list',$download_list);
 		$this->display();
 		
 	}
 		
 	function edit(){
 		if (isset($_POST['dosubmit'])) {
-			$mod = D('user');		
-			$user_data = $mod->create();			
-			$pass=trim($_REQUEST['password']);
+			$mod = D('material');		
+			$download_data = $mod->create();			
 			
-			if(!empty($pass)){
-				$user_data['passwd']=md5(trim($_REQUEST['password']));
-			}
-			$result_info=$mod->where("id=". $user_data['id'])->save($user_data);
+			$result_info=$mod->where("id=". $download_data['id'])->save($download_data);
 			if(false !== $result_info){
 				$this->success(L('operation_success'), '', '', 'edit');
 			}else{				
 				$this->success(L('operation_failure'));
 			}
 		} else {
-			$mod = D('user');		
+			$mod = D('material');		
 			if (isset($_GET['id'])) {
 				$id = isset($_GET['id']) && intval($_GET['id']) ? intval($_GET['id']) : $this->error('请选择要编辑的链接');
 			}
-			$user = $mod->where('id='. $id)->find();		
-			$this->assign('info', $user);
+			$download = $mod->where('id='. $id)->find();		
+			$this->assign('info', $download);
 			$this->assign('show_header', false);
 			$this->display();
 		}
@@ -53,8 +47,8 @@ class UserAction extends BaseAction{
 	function add()
 	{
 		if(isset($_POST['dosubmit'])){
-			$user_mod = D('user');
-			if($_POST['account']==''){
+			$user_mod = D('material');
+		/* 	if($_POST['material_name']==''){
 				$this->error(L('input').L('user_account'));
 			}
 			if(false === $data = $user_mod->create()){
@@ -63,8 +57,23 @@ class UserAction extends BaseAction{
 			if ($_FILES['img']['name']!='') {
 				$upload_list = $this->_upload();
 				$data['img'] = $upload_list['0']['savename'];
+			} */
+			$data['material_name']=$_POST['material_name'];
+		
+			$data['material_type']=$_POST['material_type'];
+			
+			$data['material_site']=$_POST['material_site'];
+			
+			$data['uploadedby']=$_POST['uploadedby'];
+			
+			$data['uploadname']=$_POST['uploadname'];
+			
+			if($_POST['uploadtime']==''){
+				$data['uploadtime']=date('Y-m-d H:i:s',time());
+			}else{
+			    $data['uploadtime']=$_POST['uploadtime'];
 			}
-			$data['add_time']=date('Y-m-d H:i:s',time());
+			
 			$result = $user_mod->add($data);
 			if($result){
 				$cate = M('user_cate')->field('id,pid')->where("id=".$data['cate_id'])->find();
@@ -115,7 +124,7 @@ class UserAction extends BaseAction{
 //	}
 	public function delete()
     {
-		$user_mod = D('user');
+		$user_mod = D('material');
 		$user_platform=D('user_platform');
 		
 		if(!isset($_POST['id']) || empty($_POST['id'])) {

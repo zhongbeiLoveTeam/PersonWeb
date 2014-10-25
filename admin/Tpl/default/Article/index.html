@@ -71,6 +71,7 @@
             <td align="center" onclick="status({$val.id},'is_best')" id="is_best_{$val.id}"><img src="__ROOT__/statics/images/status_{$val.is_best}.gif" /></td>
       		<td align="center" onclick="status({$val.id},'status')" id="status_{$val.id}"><img src="__ROOT__/statics/images/status_{$val.status}.gif" /></td>
 			<td align="center"><a class="blue" href="{:u('Article/edit', array('id'=>$val['id']))}">编辑</a></td>
+			</tr>
         </volist>
     	</tbody>
     </table>
