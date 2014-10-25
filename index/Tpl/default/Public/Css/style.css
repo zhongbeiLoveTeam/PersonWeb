@@ -809,7 +809,7 @@
     -o-transform: rotatey(-180deg);
     -ms-transform: rotatey(-180deg);
     transform: rotatey(-180deg);
-    background-image: url("../Images/myqr.png");
+    background-image:url("../Images/myqr.png");
     background-position: center bottom;
     font-weight: bold;
     text-align: center;

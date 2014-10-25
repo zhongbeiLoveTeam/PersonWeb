@@ -18,21 +18,21 @@
 	<include file="Common:intoHead" />
 </head>
 <body class="preload impress-not-supported">
-	<!--*** Loading animated ***-->
+	<!--*** 加载动画Loading animated ***-->
 	<div class="loading-panel">
 		<div class="loading">
 			<div id="loading-gif"></div>
 		</div>
 	</div>
 	<!--***主菜单 Menu 开始***-->
-	<include file="Common:menu" />
+	\ <include file="Common:menu" />
 	<!--***主菜单 Menu 结束 ***-->
 	
 	<!--*** 分页面 ***-->
 	<div id="impress">
 		<!--*** 我的资料 ***-->
 		<section class="profile_container cover step" id="profile" data-x="0" data-y="0">
-			<h1 class="cover"><span class="h1-text fg-bgc">关于</span><span class="h1-corner fg-bdc"></span></h1>
+			<h1 class="cover"><span class="h1-text fg-bgc">关于我</span><span class="h1-corner fg-bdc"></span></h1>
 			<figure class="me left">
 				<div id="myqr">Scan My QR Code</div>
 				<div id="myimg"></div><!-- 个人头像位置 -->
@@ -94,7 +94,7 @@
 		
 		<!--*** 我的简历 ***-->
 		<section class="resume_container cover step" id="resume" data-x="1000" data-y="-500" data-z="-1500" data-rotate="10" >
-			<h1 class="cover"><span class="h1-text fg-bgc">Resume</span><span class="h1-corner fg-bdc"></span></h1>
+			<h1 class="cover"><span class="h1-text fg-bgc">简历Resume</span><span class="h1-corner fg-bdc"></span></h1>
 			<!-- EXPERIENCE section -->
 			<section class="edu left">
 				<h2>工作经验EXPERIENCE</h2>
@@ -122,9 +122,9 @@
 				</ul>
 			</section>
 			
-			<!-- EDUCATION section -->
+			<!-- 毕业院校EDUCATION section -->
 			<section class="job">
-				<h2>EDUCATION</h2>
+				<h2>毕业院校</h2>
 				<ul class="exp-list">
 					<li>
 						<h3>University of Cambridge</h3>
@@ -139,7 +139,7 @@
 				</ul>
 			</section>
 
-				<!-- SKILLS section -->
+				<!-- 技能部分SKILLS section -->
 			<section class="skills">
 				<div class="graph-skill">
 					<!-- Choose a number between 0 to 100 for your skills -->
@@ -166,12 +166,12 @@
 			</section>
 		</section>
 
-		<!--*** 论坛forum 1/2 ***-->
+		<!--*** 论坛 ***-->
 		<section class="portfolio_container portfolio1 cover step" id="forum" data-x="-300" data-y="-1200" data-z="-3000">
-			<h1 class="cover"><span class="h1-text fg-bgc">forum 1/2</span><span class="h1-corner fg-bdc"></span></h1>
+			<h1 class="cover"><span class="h1-text fg-bgc">论坛</span><span class="h1-corner fg-bdc"></span></h1>
 			 <ul class="filter cover">
-				<li id="all1">All</li>
-				<li id="cat_01">Logo</li>
+				<li id="all1">全部文章All</li>
+				<li id="cat_01">web开发Logo</li>
 				<li id="cat_02">Website</li>
 				<li id="cat_03">Poster</li>
 			</ul>
@@ -244,9 +244,9 @@
 				</li>
 			</ul>
 		</section>
-        <!--*** 今日随笔article 1/2 ***-->
+        <!--*** 今日随笔 ***-->
 		<section class="portfolio_container portfolio1 cover step" id="article" data-x="-300" data-y="-1200" data-z="-3000">
-			<h1 class="cover"><span class="h1-text fg-bgc">Portfolio 1/2</span><span class="h1-corner fg-bdc"></span></h1>
+			<h1 class="cover"><span class="h1-text fg-bgc">今日随笔</span><span class="h1-corner fg-bdc"></span></h1>
 			 <ul class="filter cover">
 				<li id="all1">All</li>
 				<li id="cat_01">Logo</li>
@@ -322,14 +322,14 @@
 				</li>
 			</ul>
 		</section>
-       <!--*** Portfolio 1/2 ***-->
+       <!--*** 下载专区 ***-->
 		<section class="portfolio_container portfolio1 cover step" id="Portfolio" data-x="-300" data-y="-1200" data-z="-3000">
-			<h1 class="cover"><span class="h1-text fg-bgc">Portfolio 1/2</span><span class="h1-corner fg-bdc"></span></h1>
+			<h1 class="cover"><span class="h1-text fg-bgc">下载专区</span><span class="h1-corner fg-bdc"></span></h1>
 			 <ul class="filter cover">
-				<li id="all1">All</li>
-				<li id="cat_01">Logo</li>
-				<li id="cat_02">Website</li>
-				<li id="cat_03">Poster</li>
+				<li id="all1">全部资源</li>
+				<li id="cat_01">web开发软件</li>
+				<li id="cat_02">图形建模软件</li>
+				<li id="cat_03">其他</li>
 			</ul>
 
 			<!-- PORTFOLIO-LIST section -->
@@ -491,11 +491,7 @@
 			
 			<!-- CONTACT FORM -->
 			<div class="form">
-<<<<<<< HEAD
-				<form action="__APP__/Contract/index" class="right" id="contact-form" method="post" target='ifrm'>
-=======
 				<form action="__APP__/Contract/send" class="right" id="contact-form" method="post" target='ifrm'>
->>>>>>> origin/master
 					<input id="name" placeholder="Name" type="text" name="name" title="Your Name" />
 					<input id="mail" placeholder="E-mail" type="text" name="mail" title="Your E-mail Address" />
 					<textarea id="msg" placeholder="Your Message" name="msg" cols="40" rows="10" title="The Text Sent to Me"></textarea>
@@ -591,7 +587,7 @@
 		<!-- <section id="overview" class="step" data-x="0" data-y="-600" data-rotate-x="10" data-z="1000"></section> -->
 	</div>
 
-	<!--*** SKIN SELECT ***-->
+	<!--*** 皮肤选择SKIN SELECT ***-->
 	<div class="skin-selector">
 		<a id="toggle-panel" href="#" title="Custom your Site Now!"><img src="__IMG__/pin.png" width="26" height="26" alt="" /></a>
 		<div class="container-skins">
