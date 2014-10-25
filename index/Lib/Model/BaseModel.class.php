@@ -1,5 +1,5 @@
 <?php
-class CommonModel extends Model {
+class BaseModel extends Model {
 	public function listNews($name,$firstRow = 0, $listRows = 20,$where) {
 		$M = M($name);
 		$count = $M->where($where)->count();
@@ -24,12 +24,12 @@ class CommonModel extends Model {
 		if($type['pid']==0){
 			$types = D('Category')->where('status=1 AND pid='.$type['id'])->select();
 			if(is_array($types)){
-					foreach($types as $val) $ary[]=$val['id'];
+				foreach($types as $val) $ary[]=$val['id'];
 			}
 			$map['tid']	= array('in',$ary);
 		}else{
 			$map['tid'] = array('eq',$id);
 		}
-		return $map;		
+		return $map;
 	}
 }

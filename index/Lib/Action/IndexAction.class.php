@@ -17,7 +17,6 @@ class IndexAction extends BaseAction {
     	$this->assign('myfrofile',M('Profile')->select());
     	//友情链接
     	$this->assign('link',M('Link')->where('status=1')->order('sort DESC')->select());
-    	
 		$this->display();
     }
     public function map(){

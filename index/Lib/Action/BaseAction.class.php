@@ -15,10 +15,10 @@ class BaseAction extends Action {
 		$menuwhere['type']="1";
 		$menuresult=$menuModel->where($menuwhere)->order('sort')->limit(6)->select();
 		$this->assign('menu',$menuresult);
-		//seo
+		/* //seo
 		$systemConfig = include WEB_ROOT . 'Common/systemConfig.php';
 		F("systemConfig", $systemConfig, WEB_ROOT . "Common/");
-		$this->assign("site", $systemConfig);
+		$this->assign("site", $systemConfig); */
 		//网站配置
 		$this->assign('webset',M('Setting')->select());
 		
@@ -66,6 +66,39 @@ class BaseAction extends Action {
 		$this->assign('link',D('Link')->where('status=1')->order('sort DESC')->limit(8)->select());
 		$this->assign('nav_list',$nav_list);
 	}
+	//URL转换
+	public function changurl($ary){
+		if(is_array($ary)){
+			if(key_exists('apv', $ary)){
+				$ary['rewrite']?$ary['url']='__APP__/'.$ary['rewrite']:$ary['url']='__APP__/article/view/id/'.$ary['id'];
+			}elseif(key_exists('module', $ary)){
+				$ary['rewrite']?$ary['url']='__APP__/'.$ary['rewrite']:$ary['url']='__APP__/'.strtolower($ary['module']).'/index/id/'.$ary['id'];
+			}else{
+				$ary['rewrite']?$ary['url']='__APP__/'.$ary['rewrite']:$ary['url']='__APP__/video/view/id/'.$ary['id'];
+			}
+			return $ary;
+		}
+	}
+	//模板选择
+	public function choosetpl($ary){
+		if(is_array($ary)){
+			if(strpos($ary['template'], ':')){
+				$exp = explode(':', $ary['template']);
+				$file = $_SERVER['DOCUMENT_ROOT'].APP_TMPL_PATH.$exp[0].'/'.$exp[1].'.html';
+			}
+			if(strpos($ary['template'], ':') && is_file($file)){
+				$this->display($ary['template']);
+			}else{
+				if(key_exists('apv', $ary)){
+					$this->display('article:view');
+				}elseif (key_exists('module', $ary)){
+					$this->display(strtolower($ary['module']).':index');
+				}else{
+					$this->display('video:view');
+				}
+			}
+		}
+	}
 	//SEO赋值
 	public function seo($title,$keywords,$description,$positioin){
 		$this->assign('title',$title);
@@ -82,6 +115,19 @@ class BaseAction extends Action {
 		$fp = fopen($filename, 'rb');
 		fpassthru($fp);
 		fclose($fp);
+	}
+	//留言评论信息处理
+	public function msgmodify($ary){
+		if(is_array($ary)){
+			if($ary['adder_id']) $ary['adder_name']=getUserName($ary['adder_id']);
+			$ary['adder_email'] = md5($ary['adder_email']);
+		}
+		return $ary;
+	}
+
+	//空操作
+	public function _empty(){
+		$this->redirect("/");
 	}
 }
 
