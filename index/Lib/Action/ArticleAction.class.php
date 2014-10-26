@@ -1,11 +1,11 @@
 <?php
 //前台文章管理
-class ArticleAction extends CommonAction{
+class ArticleAction extends BaseAction{
 	//列表
 	public function index(){
 		$id = $this->router();
-		$type = D('Category')->where('status=1')->find($id);
-		$map = D('Common')->getCategoryMap($id);
+		//$type = D('Category')->where('status=1')->find($id);
+		$map = D('Base')->getCategoryMap($id);
 		$map['status'] = array('eq',1);			
 		//分页取数据
 		import("ORG.Util.Page");
@@ -13,15 +13,14 @@ class ArticleAction extends CommonAction{
 		$count = $Article->where($map)->count(); 
 		$Page = new Page($count,8);
 		$show = $Page->show(); 
-		$list = $Article->where($map)->order('sort DESC,add_time DESC')->limit($Page->firstRow.','.$Page->listRows)->select();
+		$list = $Article->where($map)->order('ordid DESC,add_time DESC')->limit($Page->firstRow.','.$Page->listRows)->select();
 		foreach ($list as $key=>$val){
 			$list[$key]=$this->changurl($val);
 		}
 		//赋值给模板
-		$this->assign('list',$list);
-		$this->assign('page',$show);
-		$this->seo($type['title'], $type['keywords'], $type['description'], D('Common')->getPosition($id));
-		$this->choosetpl($type);
+		$this->assign('Articlelist',$list);
+		$this->assign('Articlepage',$show);
+		//$this->choosetpl($type);
 	}
 	//查看文章详细信息
 	public function view(){		
