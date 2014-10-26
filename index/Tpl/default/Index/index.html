@@ -32,9 +32,9 @@
 	<div id="impress">
 		<!--*** 我的资料 ***-->
 		<section class="profile_container cover step" id="profile" data-x="0" data-y="0">
-			<h1 class="cover"><span class="h1-text fg-bgc">关于我</span><span class="h1-corner fg-bdc"></span></h1>
+			<h1 class="cover"><span class="h1-text fg-bgc">我的资料</span><span class="h1-corner fg-bdc"></span></h1>
 			<figure class="me left">
-				<div id="myqr">Scan My QR Code</div>
+				<div id="myqr">二维码</div>
 				<div id="myimg"></div><!-- 个人头像位置 -->
 			</figure>
 			<section class="personal-info right">
@@ -53,35 +53,35 @@
 					<li>
 						<div class="label fg-bgc">电话号码</div>
 						<div class="corner fg-bdc"></div>
-						<div class="text">{$myfrofile['0']['birthday']}</div>
+						<div class="text">{$myfrofile['0']['tel']}</div>
 					</li>
 					<li>
 						<div class="label fg-bgc">Email</div>
 						<div class="corner fg-bdc"></div>
-						<div class="text"><a href="#contact">{$myfrofile['0']['birthday']}</a></div>
+						<div class="text"><a href="#contact">{$myfrofile['0']['email']}</a></div>
 					</li>
-					<li>
+					<!-- <li>
 						<div class="label fg-bgc">Website</div>
 						<div class="corner fg-bdc"></div>
 						<div class="text"><a href="{$myfrofile['0']['birthday']}" target="_blank">{$myfrofile['0']['birthday']}</a></div>
-					</li>
+					</li> -->
 					<li>
-						<div class="label fg-bgc">Address</div>
+						<div class="label fg-bgc">住址</div>
 						<div class="corner fg-bdc"></div>
-						<div class="text">{$myfrofile['0']['birthday']}</div>
+						<div class="text">{$myfrofile['0']['address']}</div>
 					</li>
 				</ul>
 			</section>
 			<section class="aboutme">
 				<hgroup>
-					<h2 class="f30">Narsis Askari</h2>
-					<h2 class="f20">WEB DEVELOPER</h2>
+					<h2 class="f30">我的签名</h2>
+					<!-- <h2 class="f20">WEB DEVELOPER</h2> -->
 				</hgroup>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+				<p>{$myfrofile['0']['signature']}</p>
 			</section>
-			<a class="dwn-vcard fg-bgc" href="#">Download vCard</a>
+			<a class="dwn-vcard fg-bgc" href="#">下载附件</a>
 				<!-- Social Icons -->
-			<ul class="social cover">
+			<!-- <ul class="social cover">
 				<li><a class="facebook" title="Facebook" href="#"></a></li>
 				<li><a class="twitter" title="Twitter" href="#"></a></li>
 				<li><a class="cs" title="CS" href="#"></a></li>
@@ -89,34 +89,34 @@
 				<li><a class="google" title="Google" href="#"></a></li>
 				<li><a class="linkedin" title="Linkedin" href="#"></a></li>
 				<li><a class="rss" title="RSS" href="#"></a></li>
-			</ul>
+			</ul> 我的分享-->
 		</section>
 		
 		<!--*** 我的简历 ***-->
 		<section class="resume_container cover step" id="resume" data-x="1000" data-y="-500" data-z="-1500" data-rotate="10" >
-			<h1 class="cover"><span class="h1-text fg-bgc">简历Resume</span><span class="h1-corner fg-bdc"></span></h1>
+			<h1 class="cover"><span class="h1-text fg-bgc">MyResume</span><span class="h1-corner fg-bdc"></span></h1>
 			<!-- EXPERIENCE section -->
 			<section class="edu left">
 				<h2>我的经历</h2>
 				<ul class="edu-list">
 					<li>
 						<h3>Developer</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores rerum debitis beatae.</p>
+						<p>{$myexperience['0']['resume_site']}</p>
 						<span>2001-2003</span>
 					</li>
 					<li>
 						<h3>CEO</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur modi quibusdam quas.</p>
+						<p>{$myexperience['0']['resume_site']}</p>
 						<span>2002-2005</span>
 					</li>
 					<li>
 						<h3>Web Teacher</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae fuga necessitatibus atque.</p>
+						<p>{$myexperience['0']['resume_site']}</p>
 						<span>2008-2009</span>
 					</li>
 					<li>
 						<h3>Chief Engineer</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum doloribus aperiam quod.</p>
+						<p>{$myexperience['0']['resume_site']}</p>
 						<span>2012-2013</span>
 					</li>
 				</ul>
@@ -128,12 +128,12 @@
 				<ul class="exp-list">
 					<li>
 						<h3>University of Cambridge</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus egestas erat nunc.</p>
+						<p>{$myexperience['0']['resume_site']}</p>
 						<span>2004-2008</span>
 					</li>
 					<li>
 						<h3>University of Cambridge</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+						<p>{$myexperience['0']['resume_site']}</p>
 						<span>2009-2012</span>
 					</li>
 				</ul>
@@ -165,86 +165,7 @@
 				</div>
 			</section>
 		</section>
-
-		<!--*** 论坛 ***-->
-		<section class="portfolio_container portfolio1 cover step" id="forum" data-x="-300" data-y="-1200" data-z="-3000">
-			<h1 class="cover"><span class="h1-text fg-bgc">论坛</span><span class="h1-corner fg-bdc"></span></h1>
-			 <ul class="filter cover">
-				<li id="all1">全部文章All</li>
-				<li id="cat_01">web开发Logo</li>
-				<li id="cat_02">Website</li>
-				<li id="cat_03">Poster</li>
-			</ul>
-
-			<!-- PORTFOLIO-LIST section -->
-			<!--  <ul id="portfolio-list" class="cover">
-				<li class="cat_01">
-					<a class="port_group" href="__IMG__/portfolio/1.jpg">
-						<img src="__IMG__/portfolio/thumb/1.jpg" width="200" height="140" alt="" />
-						<span></span>
-					</a>
-					<h3 class="title">title about your work</h3>
-					<p class="categorie">Categorie Name</p>
-				</li>
-				<li class="cat_03">
-					<a class="port_group" href="__IMG__/portfolio/2.jpg">
-						<img src="__IMG__/portfolio/thumb/2.jpg" width="200" height="140" alt="" />
-						<span></span>
-					</a>
-					<h3 class="title">title about your work</h3>
-					<p class="categorie">Categorie Name</p> 
-				</li>
-				<li class="cat_02">
-					<a class="port_group" href="__IMG__/portfolio/3.jpg">
-						<img src="__IMG__/portfolio/thumb/3.jpg" width="200" height="140" alt="" />
-						<span></span>
-					</a>
-					<h3 class="title">title about your work</h3>
-					<p class="categorie">Categorie Name</p> 
-				</li>
-				<li class="cat_02">
-					<a class="port_group" href="__IMG__/portfolio/4.jpg">
-						<img src="__IMG__/portfolio/thumb/4.jpg" width="200" height="140" alt="" />
-						<span></span>
-					</a>
-					<h3 class="title">title about your work</h3>
-					<p class="categorie">Categorie Name</p> 
-				</li>
-				<li class="cat_01">
-					<a class="port_group" href="__IMG__/portfolio/5.jpg">
-						<img src="__IMG__/portfolio/thumb/5.jpg" width="200" height="140" alt="" />
-						<span></span>
-					</a>
-					<h3 class="title">title about your work</h3>
-					<p class="categorie">Categorie Name</p> 
-				</li>
-				<li class="cat_02">
-					<a class="port_group" href="__IMG__/portfolio/6.jpg">
-						<img src="__IMG__/portfolio/thumb/6.jpg" width="200" height="140" alt="" />
-						<span></span>
-					</a>
-					<h3 class="title">title about your work</h3>
-					<p class="categorie">Categorie Name</p> 
-				</li>
-				<li class="cat_03">
-					<a class="port_group" href="__IMG__/portfolio/7.jpg">
-						<img src="__IMG__/portfolio/thumb/7.jpg" width="200" height="140" alt="" />
-						<span></span>
-					</a>
-					<h3 class="title">title about your work</h3>
-					<p class="categorie">Categorie Name</p> 
-				</li>
-				<li class="cat_01">
-					<a class="port_group" href="__IMG__/portfolio/8.jpg">
-						<img src="__IMG__/portfolio/thumb/8.jpg" width="200" height="140" alt="" />
-						<span></span>
-					</a>
-					<h3 class="title">title about your work</h3>
-					<p class="categorie">Categorie Name</p> 
-				</li>
-			</ul>-->
-		</section>
-        <!--*** 随笔 ***-->
+       <!--*** 随笔 ***-->
 		<section class="portfolio_container portfolio1 cover step" id="article" data-x="-300" data-y="-1200" data-z="-3000">
 			<h1 class="cover">
 				<span class="h1-text fg-bgc">随笔</span><span class="h1-corner fg-bdc"></span>
@@ -328,6 +249,85 @@
 					<p class="categorie">Categorie Name</p> 
 				</li>
 			</ul>
+		</section>
+ 
+		<!--*** 留言板 ***-->
+		<section class="portfolio_container portfolio1 cover step" id="forum" data-x="-300" data-y="-1200" data-z="-3000">
+			<h1 class="cover"><span class="h1-text fg-bgc">论坛</span><span class="h1-corner fg-bdc"></span></h1>
+			 <ul class="filter cover">
+				<li id="all1">全部文章All</li>
+				<li id="cat_01">web开发Logo</li>
+				<li id="cat_02">Website</li>
+				<li id="cat_03">Poster</li>
+			</ul>
+
+			<!-- PORTFOLIO-LIST section -->
+			<!--  <ul id="portfolio-list" class="cover">
+				<li class="cat_01">
+					<a class="port_group" href="__IMG__/portfolio/1.jpg">
+						<img src="__IMG__/portfolio/thumb/1.jpg" width="200" height="140" alt="" />
+						<span></span>
+					</a>
+					<h3 class="title">title about your work</h3>
+					<p class="categorie">Categorie Name</p>
+				</li>
+				<li class="cat_03">
+					<a class="port_group" href="__IMG__/portfolio/2.jpg">
+						<img src="__IMG__/portfolio/thumb/2.jpg" width="200" height="140" alt="" />
+						<span></span>
+					</a>
+					<h3 class="title">title about your work</h3>
+					<p class="categorie">Categorie Name</p> 
+				</li>
+				<li class="cat_02">
+					<a class="port_group" href="__IMG__/portfolio/3.jpg">
+						<img src="__IMG__/portfolio/thumb/3.jpg" width="200" height="140" alt="" />
+						<span></span>
+					</a>
+					<h3 class="title">title about your work</h3>
+					<p class="categorie">Categorie Name</p> 
+				</li>
+				<li class="cat_02">
+					<a class="port_group" href="__IMG__/portfolio/4.jpg">
+						<img src="__IMG__/portfolio/thumb/4.jpg" width="200" height="140" alt="" />
+						<span></span>
+					</a>
+					<h3 class="title">title about your work</h3>
+					<p class="categorie">Categorie Name</p> 
+				</li>
+				<li class="cat_01">
+					<a class="port_group" href="__IMG__/portfolio/5.jpg">
+						<img src="__IMG__/portfolio/thumb/5.jpg" width="200" height="140" alt="" />
+						<span></span>
+					</a>
+					<h3 class="title">title about your work</h3>
+					<p class="categorie">Categorie Name</p> 
+				</li>
+				<li class="cat_02">
+					<a class="port_group" href="__IMG__/portfolio/6.jpg">
+						<img src="__IMG__/portfolio/thumb/6.jpg" width="200" height="140" alt="" />
+						<span></span>
+					</a>
+					<h3 class="title">title about your work</h3>
+					<p class="categorie">Categorie Name</p> 
+				</li>
+				<li class="cat_03">
+					<a class="port_group" href="__IMG__/portfolio/7.jpg">
+						<img src="__IMG__/portfolio/thumb/7.jpg" width="200" height="140" alt="" />
+						<span></span>
+					</a>
+					<h3 class="title">title about your work</h3>
+					<p class="categorie">Categorie Name</p> 
+				</li>
+				<li class="cat_01">
+					<a class="port_group" href="__IMG__/portfolio/8.jpg">
+						<img src="__IMG__/portfolio/thumb/8.jpg" width="200" height="140" alt="" />
+						<span></span>
+					</a>
+					<h3 class="title">title about your work</h3>
+					<p class="categorie">Categorie Name</p> 
+				</li>
+			</ul>-->
 		</section>
        <!--*** 下载专区 ***-->
 		<section class="portfolio_container portfolio1 cover step" id="Portfolio" data-x="-300" data-y="-1200" data-z="-3000">
@@ -488,7 +488,7 @@
 			</ul>
 		</section>
 
-		<!--*** Contact ***-->
+		<!--***联系我Contact ***-->
 		<section class="contact_container cover step" id="contact" data-x="-1600" data-y="-600" data-z="-4700" data-rotate-z="10" data-rotate-y="180">
 			<h1 class="cover"><span class="h1-text fg-bgc">Contact Me</span><span class="h1-corner fg-bdc"></span></h1>
 			
