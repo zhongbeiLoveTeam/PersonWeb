@@ -1,4 +1,5 @@
 <include file="Public:header" />
+ <script language="javascript" type="text/javascript" src="__ROOT__/statics/js/My97DatePicker/WdatePicker.js"></script><!--引入时间插件  -->
 <div class="pad_10">
     <form action="{:u('Person/edit')}" method="post" name="myform" id="myform" enctype="multipart/form-data" >
         <input type="hidden" name="id" value="{$info.id}" />
@@ -33,9 +34,10 @@
             </tr>
             <tr>
                 <th width="60">生日:</th>
-                <td><input type="text" name="birthdayshenri" id="birthdayshenri" size="25" value="{$info.birthdayshenri}" ></td>
+                <td>
+                 <input type="text"  name="birthday"  id="birthday"  value="{$info.birthday}" onClick="WdatePicker()" />
+                </td>
             </tr>
-           
             <tr>
                 <th width="60">电话:</th>
                 <td><input type="text" name="tel" id="tel" size="25" value="{$info.tel}" ></td>
@@ -48,21 +50,14 @@
                 <th width="60">附件名称:</th>
                 <td><input type="text" name="attachment_name" id="attachment_name" size="25" value="{$info.attachment_name}" ></td>
             </tr>
-            
-			
 			<tr>
                 <th width="60">附件地址 :</th>
                 <td><input type="text" name="attachment_site" id="attachment_site" size="25" value="{$info.attachment_site}" ></td>
             </tr>
-			
-          
         </table>
-       
          <div class="btn">
     <input type="submit" value="{$Think.lang.submit}" name="dosubmit"  class="button" id="dosubmit">
         </div>
-        
-      
     </form>
     <script type="text/javascript">
 	$(function(){
