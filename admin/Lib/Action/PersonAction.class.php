@@ -85,5 +85,5 @@ public function edit() {
 		    $user_platform->where("user_id='{$id}'")->delete();	
 		}
 		$this->success(L('operation_success'));
-    }
-} */
+    }*/
+} 

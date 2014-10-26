@@ -116,6 +116,21 @@ class BaseAction extends Action {
 		fpassthru($fp);
 		fclose($fp);
 	}
+	//路由解析
+	public function router(){
+		//路由判断,路径参数还原
+		$url = $_SERVER['PATH_INFO'];
+		$ary = explode('/', $url);
+		$rewrite = urldecode($ary[1]);
+		$r = D("Router")->where("rewrite='".$rewrite."'")->getField('url');
+		if($r){
+			$exp = explode('/', $r);
+			$id = $exp[3];
+		}elseif ($_GET['id']){
+			$id = $_GET['id'];
+		}
+		return $id;
+	}
 	//留言评论信息处理
 	public function msgmodify($ary){
 		if(is_array($ary)){
