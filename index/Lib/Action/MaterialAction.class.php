@@ -1,19 +1,20 @@
 <?php
 /* 
- * 个人背景管理
+ * 下载专区
  *  
  *  
- *  */
-class BackAction extends BaseAction{
+ *  
+ */
+class MaterialAction extends BaseAction{
 	//列表
 	public function index(){
 		$id = $this->router();
 		$type = D('Category')->where('status=1')->find($id);
-		$map = D('Common')->getCategoryMap($id);
+		$map = D('Base')->getCategoryMap($id);
 		$map['status'] = array('eq',1);			
 		//分页取数据
 		import("ORG.Util.Page");
-		$Article = D("Article");			
+		$Article = D("Material");			
 		$count = $Article->where($map)->count(); 
 		$Page = new Page($count,8);
 		$show = $Page->show(); 
@@ -61,6 +62,10 @@ class BackAction extends BaseAction{
 		}
 		$this->assign('msg_list',$message);//评论
 		$this->choosetpl($info);
+		
+	}
+	public function dealSearch(){
+		//处理搜索
 		
 	}
 }
