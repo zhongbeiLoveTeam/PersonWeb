@@ -1,10 +1,6 @@
 <?php
-/* 
- * 个人背景管理
- *  
- *  
- *  */
-class BackAction extends BaseAction{
+//前台下载管理
+class ArticleAction extends CommonAction{
 	//列表
 	public function index(){
 		$id = $this->router();
